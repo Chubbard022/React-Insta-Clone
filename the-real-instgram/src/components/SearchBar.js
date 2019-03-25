@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const SearchBar = props =>{
     return(
@@ -13,5 +14,7 @@ const SearchBar = props =>{
         </React.Fragment>
     )
 }
-
+SearchBar.propTypes = {
+    
+}
 export default SearchBar;

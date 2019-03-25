@@ -34,3 +34,10 @@
     transform: rotate(360deg);
   }
 }
+.insta-post{
+  border: 1px solid red;
+  margin: 10px;
+}
+img{
+  width: 20%;
+}
