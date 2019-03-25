@@ -1,4 +1,6 @@
 import React from 'react';
+import Comments from './Comment';
+
 
 const CommentSection = props =>{
     console.log('each post',props.passedArray)
@@ -9,7 +11,7 @@ const CommentSection = props =>{
                 <p>{props.passedArray.username}</p>
             </header>
             <img src={props.passedArray.imageUrl} alt=''/>
-            <p>Comments here</p>
+            <Comments />
         </div>
     )
 }
