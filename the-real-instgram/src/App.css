@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  border: 1px solid black;
   margin: 10px;
   padding: 10px;
 }
@@ -35,9 +34,38 @@
   }
 }
 .insta-post{
-  border: 1px solid red;
+  border: 1px solid black;
   margin: 10px;
+  width: 50%;
 }
 img{
-  width: 20%;
+  padding-top: 5px;
+  width: 65%;
+}
+.searchBox{
+  border-bottom: 1px solid black;
+}
+.searchInput{
+  border: 1px solid black;
+  margin: 5px;
+  font-size: 20px;
+}
+.card-header{
+  padding:5px;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: start;
+
+}
+.card-header img{
+  height: 50px;
+  width: 50px;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+.card-holder{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 40px;
 }

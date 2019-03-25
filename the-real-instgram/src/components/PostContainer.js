@@ -7,22 +7,28 @@ import PropTypes from 'prop-types';
 const PostContainer = props =>{
     console.log(props)
     return(
-        <React.Fragment>
+        <div className='card-holder'>
             {
                 props.array.map(post=>
                     <div className='insta-post' key={post.username}>
-                        <h1>{post.username}</h1>
-                        <img src={post.imageUrl} alt='uploaded-photo'/>
-                        < CommentSection key={post.username} passedArray={post} />
+                        < CommentSection key={post.username} passedArray={post}/>
                     </div>
                 )
             }
-        </React.Fragment>
+        </div>
     )
 }
 
 PostContainer.propTypes = {
-    
+    array: PropTypes.arrayOf(
+        PropTypes.shape({
+            comments: PropTypes.array,
+            likes: PropTypes.number,
+            timestamp: PropTypes.string,
+            username: PropTypes.string.isRequired,
+            imageUrl: PropTypes.string.isRequired
+        })
+    )
 }
 
 export default PostContainer;

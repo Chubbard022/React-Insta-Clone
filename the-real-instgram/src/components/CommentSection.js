@@ -1,16 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const CommentSection = props =>{
     console.log('each post',props.passedArray)
     return(
         <div>
-            <p>comment section here</p>
+            <header className='card-header'>
+                <img src={props.passedArray.thumbnailUrl} alt=''/>
+                <p>{props.passedArray.username}</p>
+            </header>
+            <img src={props.passedArray.imageUrl} alt=''/>
+            <p>Comments here</p>
         </div>
     )
 }
-CommentSection.propTypes={
 
-}
-
-export default CommentSection;
+export default CommentSection
