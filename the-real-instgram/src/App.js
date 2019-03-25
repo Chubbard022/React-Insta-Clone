@@ -4,7 +4,6 @@ import './App.css';
 import dummyData from './dummy-data-two'
 import PostContainer from './components/PostContainer';
 import SearchBar from './components/SearchBar';
-import CommentSection from './components/CommentSection';
 
 class App extends Component {
   constructor(){
@@ -16,10 +15,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Hello</h1>
-        <PostContainer />
         <SearchBar />
-        <CommentSection />
+        <PostContainer array={this.state.stateArray} />
       </div>
     );
   }

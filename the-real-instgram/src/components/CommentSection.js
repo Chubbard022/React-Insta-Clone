@@ -1,9 +1,10 @@
 import React from 'react';
 
 const CommentSection = props =>{
+    console.log('each post',props.passedArray)
     return(
         <div>
-            <h1>Hello from comment section</h1>
+            hi
         </div>
     )
 }

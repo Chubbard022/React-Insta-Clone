@@ -1,9 +1,17 @@
 import React from 'react'
+import CommentSection from './CommentSection';
+
+
 
 const PostContainer = props =>{
+    console.log(props)
     return(
         <React.Fragment>
-            <h1>Hello from Post container</h1>
+            {
+                props.array.map(post=>
+                    < CommentSection key={post.username} passedArray={post} />
+                )
+            }
         </React.Fragment>
     )
 }
