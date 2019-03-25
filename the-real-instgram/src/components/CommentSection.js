@@ -3,7 +3,6 @@ import Comments from './Comment';
 
 
 const CommentSection = props =>{
-    console.log('each post',props.passedArray)
     return(
         <div>
             <header className='card-header'>
@@ -11,7 +10,7 @@ const CommentSection = props =>{
                 <p>{props.passedArray.username}</p>
             </header>
             <img src={props.passedArray.imageUrl} alt=''/>
-            <Comments />
+            <Comments array={props.passedArray}/>
         </div>
     )
 }

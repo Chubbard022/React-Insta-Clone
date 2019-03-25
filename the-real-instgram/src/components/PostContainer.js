@@ -5,12 +5,11 @@ import PropTypes from 'prop-types';
 
 
 const PostContainer = props =>{
-    console.log(props)
-    return(
+        return(
         <div className='card-holder'>
             {
-                props.array.map(post=>
-                    <div className='insta-post' key={post.username}>
+                props.array.map((post,index)=>
+                    <div className='insta-post' key={index}>
                         < CommentSection key={post.username} passedArray={post}/>
                     </div>
                 )

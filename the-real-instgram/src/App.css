@@ -75,3 +75,6 @@ img{
   width: 97%;
   padding:10px;
 }
+.comment-box{
+  display: flex;
+}
