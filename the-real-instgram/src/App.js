@@ -9,8 +9,16 @@ class App extends Component {
   constructor(){
     super();
     this.state = {
-      stateArray: dummyData
+      stateArray: [],
+      searchInput: '',
+      commentInput: ''
     }
+  }
+  componentDidMount(){
+    console.log('component mounted:')
+    this.setState({
+      stateArray: dummyData
+    })
   }
   render() {
     return (

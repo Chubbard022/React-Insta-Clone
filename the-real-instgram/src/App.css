@@ -55,7 +55,6 @@ img{
   padding:5px;
   border-bottom: 1px solid black;
   display: flex;
-  justify-content: start;
 
 }
 .card-header img{
@@ -71,10 +70,12 @@ img{
   padding-top: 40px;
 }
 .comment-section{
-  border-top: 2px solid black;
   width: 97%;
   padding:10px;
 }
 .comment-box{
   display: flex;
+}
+.comment-username{
+  margin-right: 5px;
 }

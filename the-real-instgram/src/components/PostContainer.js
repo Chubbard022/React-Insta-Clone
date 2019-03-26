@@ -21,7 +21,12 @@ const PostContainer = props =>{
 PostContainer.propTypes = {
     array: PropTypes.arrayOf(
         PropTypes.shape({
-            comments: PropTypes.array,
+            comments: PropTypes.arrayOf(
+                PropTypes.shape({
+                    username: PropTypes.string.isRequired,
+                    text: PropTypes.string.isRequired
+                })
+            ),
             likes: PropTypes.number,
             timestamp: PropTypes.string,
             username: PropTypes.string.isRequired,

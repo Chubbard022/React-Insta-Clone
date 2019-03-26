@@ -9,6 +9,7 @@ const SearchBar = props =>{
                 type='text'
                 placeholder='search'
                 />
+                <button>Search</button>
             </form>
         </React.Fragment>
     )
