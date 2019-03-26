@@ -10,7 +10,7 @@ const CommentSection = props =>{
                 <p>{props.passedArray.username}</p>
             </header>
             <img src={props.passedArray.imageUrl} alt=''/>
-            <p className='icons'><i className="far fa-heart"></i><i className="far fa-comment"></i></p>
+            <p className='icons'><i className="far fa-heart" onClick={props.addLike}></i><i className="far fa-comment" onClick={props.passedClickEvent}></i></p>
             <p className='likes'>{props.passedArray.likes} Likes</p>
             <Comments  array={props.passedArray}/>
             <input 

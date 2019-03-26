@@ -11,7 +11,7 @@ const PostContainer = props =>{
             {
                 props.array.map((post,index)=>
                     <div className='insta-post' key={index}>
-                        < CommentSection key={post.username}  passedClickEvent={props.addComment} passedArray={post}/>
+                        < CommentSection key={post.username} addLike={props.addLike} passedClickEvent={props.addComment} passedArray={post}/>
                     </div>
                 )
             }

@@ -20,29 +20,30 @@ class App extends Component {
       stateArray: dummyData
     })
   }
-  //this function will set the task in an input field and set state to that input
-  handleInputChanges=event=>{
-    console.log('text added');
+  
+  addSearch=event=>{
+    event.preventDefault();
+    console.log('handle input firing');
   }
-  //this function adds whatever comment was added to the list of comments rendered
+
   addComment=event=>{
-    console.log('addComment')
+    console.log('addComment is firing')
     event.preventDefault();
 
     const newComment = {
       text: this.state.commentInput,
       username: 'anonymous'
     }
-    this.setState({
-      stateArray:[...this.state.stateArray, newComment]
-    })
 
+  }
+  addLike = () =>{
+    console.log('like button firing')
   }
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <PostContainer array={this.state.stateArray} addComment={this.addComment}/>
+        <SearchBar handleInput={this.addSearch}/>
+        <PostContainer array={this.state.stateArray} addLike={this.addLike} addComment={this.addComment}/>
       </div>
     );
   }
