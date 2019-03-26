@@ -68,6 +68,7 @@ img{
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 40px;
+  border: 1px solid red;
 }
 .comment-section{
   width: 97%;
@@ -78,4 +79,15 @@ img{
 }
 .comment-username{
   margin-right: 5px;
+}
+.comment-section{
+  /* border: 1px solid red; */
+}
+.icons{
+  text-align: start;
+  margin: 5px;
+  padding: 5px;
+}
+.likes{
+  text-align: start;
 }

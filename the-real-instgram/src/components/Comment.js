@@ -2,7 +2,6 @@ import React from 'react';
 
 
 const Comments = props =>{
-    //console.log(props.array.comments.[0].username)
     return(
         <div className='comment-section'>
         {
@@ -14,11 +13,6 @@ const Comments = props =>{
                     </div>
                 )
             }
-            <input 
-                type='text'
-                placeholder='add comment'
-            />
-            <button>Add Comment</button>
         </div>
     )
 }

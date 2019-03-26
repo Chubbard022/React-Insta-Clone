@@ -5,12 +5,13 @@ import PropTypes from 'prop-types';
 
 
 const PostContainer = props =>{
+    console.log(props)
         return(
         <div className='card-holder'>
             {
                 props.array.map((post,index)=>
                     <div className='insta-post' key={index}>
-                        < CommentSection key={post.username} passedArray={post}/>
+                        < CommentSection key={post.username}  passedClickEvent={props.addComment} passedArray={post}/>
                     </div>
                 )
             }
@@ -23,14 +24,14 @@ PostContainer.propTypes = {
         PropTypes.shape({
             comments: PropTypes.arrayOf(
                 PropTypes.shape({
-                    username: PropTypes.string.isRequired,
-                    text: PropTypes.string.isRequired
+                    username: PropTypes.string,
+                    text: PropTypes.string
                 })
             ),
             likes: PropTypes.number,
             timestamp: PropTypes.string,
-            username: PropTypes.string.isRequired,
-            imageUrl: PropTypes.string.isRequired
+            username: PropTypes.string,
+            imageUrl: PropTypes.string
         })
     )
 }
