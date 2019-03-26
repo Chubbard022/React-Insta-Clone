@@ -5,13 +5,20 @@ import PropTypes from 'prop-types';
 
 
 const PostContainer = props =>{
-    console.log(props)
+    // console.log(props)
         return(
         <div className='card-holder'>
             {
                 props.array.map((post,index)=>
                     <div className='insta-post' key={index}>
-                        < CommentSection key={post.username} addLike={props.addLike} passedClickEvent={props.addComment} passedArray={post}/>
+                        < CommentSection
+                            key={post.username} 
+                            commentInput={props.commentInput} 
+                            addLike={props.addLike} 
+                            addComment={props.addComment} 
+                            passedArray={post} 
+                            handleChange={props.handleChange}
+                         />
                     </div>
                 )
             }

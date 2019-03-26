@@ -14,6 +14,13 @@ class App extends Component {
       commentInput: ''
     }
   }
+  handleChange=event=>{
+    console.log(event.target.value)
+
+    this.setState({
+      commentInput: event.target.value
+    })
+  }
   componentDidMount(){
     console.log('component mounted:')
     this.setState({
@@ -29,21 +36,22 @@ class App extends Component {
   addComment=event=>{
     console.log('addComment is firing')
     event.preventDefault();
-
-    const newComment = {
-      text: this.state.commentInput,
-      username: 'anonymous'
-    }
+    
 
   }
   addLike = () =>{
-    console.log('like button firing')
+    console.log(this.state.stateArray[0].likes)
   }
   render() {
     return (
       <div className="App">
         <SearchBar handleInput={this.addSearch}/>
-        <PostContainer array={this.state.stateArray} addLike={this.addLike} addComment={this.addComment}/>
+        <PostContainer 
+          searchInput={this.state.commentInput} 
+          handleChange={this.handleChange}  
+          array={this.state.stateArray} 
+          addLike={this.addLike} 
+          addComment={this.addComment}/>
       </div>
     );
   }
