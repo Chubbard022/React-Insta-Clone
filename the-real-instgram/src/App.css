@@ -68,7 +68,7 @@ img{
   flex-wrap: wrap;
   justify-content: center;
   padding-top: 40px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .comment-section{
   width: 97%;
@@ -90,4 +90,8 @@ img{
 }
 .likes{
   text-align: start;
+}
+i{
+  width: 10%;
+  font-size: 20px
 }
