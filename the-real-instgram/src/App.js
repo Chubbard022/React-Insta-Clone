@@ -10,8 +10,7 @@ class App extends Component {
     super();
     this.state = {
       stateArray: [],
-      searchInput: '',
-      commentInput: ''
+      searchInput: ''
     }
   }
   handleChange=event=>{
@@ -22,16 +21,12 @@ class App extends Component {
     })
   }
   componentDidMount(){
-    console.log('component mounted:')
     this.setState({
       stateArray: dummyData
     })
   }
   
-  addSearch=event=>{
-    event.preventDefault();
-    console.log('handle input firing');
-  }
+
 
   addComment=event=>{
     console.log('addComment is firing')
