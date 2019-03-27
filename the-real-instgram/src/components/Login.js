@@ -6,42 +6,27 @@ class Login extends React.Component{
         this.state={
             username:'',
             password: ''
+
         }
     }
-    handleUsername= event =>{
-        this.setState({
-            username: event.target.value,
-        })
-    }
-    handlePassword= event =>{
-        this.setState({
-            password: event.target.value,
-        })
-    }
-
-    submitLogin=event=>{
-        event.preventDefault();
-        this.setState({
-        })
-    }
-
-
     render(){
         return(
         <div>
             <form>
                     <input 
+                        type='text'
                         placeholder='add username'
                         value={this.state.username}
-                        onChange={this.handleUsername}
+                        onChange={this.props.usernameLogin}
                     />
                     <input 
+                        type='text'
                         placeholder='add username'
                         value={this.state.password}
-                        onChange={this.handlePassword}
+                        onChange={this.props.passwordLogin}
                     />
             </form>
-            <button onClick={this.submitLogin}>Login To Instagram</button>
+            <button onClick={this.props.submitted}>Login To Instagram</button>
         </div>
             
         )
@@ -50,16 +35,7 @@ class Login extends React.Component{
 
 export default Login;
 
-// updateComments = event =>{
-//     event.preventDefault();
 
-//     const newComment = {
-//         id: Date.now(),
-//         text: this.state.commentInput,
-//         username: 'anonymous'
-//     }
-//     this.setState({
-//         comments: [...this.state.comments, newComment],
-//         commentInput: ''
-//     })
-// }
+// usernameLogin={this.handleUsername} 
+// passwordLogin={this.handlePassword}
+// submitted={this/submitLogin}
