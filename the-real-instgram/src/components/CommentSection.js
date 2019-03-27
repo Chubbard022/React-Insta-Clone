@@ -11,6 +11,7 @@ class CommentSection extends React.Component{
             likes: props.passedArray.likes
         }
         }
+        //get input from input feild
         handleChange=event=>{    
                 this.setState({
                     commentInput: event.target.value
@@ -36,7 +37,7 @@ class CommentSection extends React.Component{
         }
         
         render(){
-            //console.log(this.state.likes)
+            
     return(
         <div className='comment-section'>
             <header className='card-header'>

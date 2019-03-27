@@ -1,40 +1,31 @@
 import React, { Component } from 'react';
-import './App.css';
+import PostPage from './components/PostsPage';
+import withAuthenticate from './Authentication/withAuthentication'
 
-import dummyData from './dummy-data-two'
-import PostContainer from './components/PostContainer';
-import SearchBar from './components/SearchBar';
+const ComponentFromWithAuthenticate = withAuthenticate(PostPage)
+
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      stateArray: [],
-      searchInput: ''
-    }
+state = {
+  loggedIn: true
+}
+toggleComponent = ()=>{
+  if(!this.state.loggedIn){
+    localStorage.setItem('loggedIn',true)
+  }else{
+    localStorage.removeItem('loggedIn');
   }
-  componentDidMount(){
-    this.setState({
-      stateArray: dummyData
-    })
-  }
-  filterPosts = post =>{
-    post.preventDefault();
-    console.log("filter!!!")
-  }
+  this.setState({showFirst: !this.state.loggedIn})
+}
+
   render() {
     return (
       <div className="App">
-        <SearchBar filterPosts={this.filterPosts}/>
-        <PostContainer 
-          searchInput={this.state.commentInput} 
-          handleChange={this.handleChange}  
-          array={this.state.stateArray} 
-          comments={this.state.stateArray.comments}
-          addComment={this.addComment}/>
+          <ComponentFromWithAuthenticate />
       </div>
     );
   }
 }
+
 
 export default App;

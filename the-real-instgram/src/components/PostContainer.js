@@ -20,6 +20,7 @@ import PropTypes from 'prop-types';
         </div>
     )
   }
+
 PostContainer.propTypes = {
     array: PropTypes.arrayOf(
         PropTypes.shape({
@@ -39,52 +40,3 @@ PostContainer.propTypes = {
 
 export default PostContainer;
 
-
-// class PostContainer extends React.Component{
-//     constructor(props){
-//         super(props);
-//         this.state={
-//             comments: props.comments,
-//             commentInput: ''
-//         }
-//     }
-//     handleChange=event=>{    
-//         this.setState({
-//           commentInput: event.target.value
-//         })
-//       }
-//       updateComments = event =>{
-//           event.preventDefault();
-
-//           const newComment = {
-//               id: Date.now(),
-//               text: this.state.commentInput,
-//               username: 'anonymous'
-//           }
-//             this.setState({
-//                 comments: [...this.state.comments, newComment],
-//                 commentInput: ''
-//         })
-//       }
-//     render(){
-         
-//         return(
-//         <div className='card-holder'>
-//             {
-//                 this.props.array.map((post,index)=>
-//                 <div className='insta-post' key={index}>
-//                             < CommentSection
-//                                 key={post.username} 
-//                                 commentInput={this.props.commentInput} 
-//                                 passedArray={post} 
-//                                 handleChange={this.handleChange}
-//                                 updateComments={this.updateComments}
-//                             />
-//                 </div>
-                
-//                 )
-//             }
-//         </div>
-//     )
-//   }
-// }
