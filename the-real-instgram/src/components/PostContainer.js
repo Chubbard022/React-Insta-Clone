@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
                             < CommentSection
                                 key={post.username} 
                                 passedArray={post} 
+                                postId={post.id}
                             />
                 </div>
                 )

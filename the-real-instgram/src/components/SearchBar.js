@@ -11,7 +11,7 @@ const SearchBar = props =>{
                 type='text'
                 placeholder='search'
                 />
-                <button onClick={props.handleInput}>Search</button>
+                <button onClick={props.filterPosts}>Search</button>
                 <i className="far fa-user"></i>
                 <i className="far fa-heart"></i>
                 <i className="far fa-compass"></i>

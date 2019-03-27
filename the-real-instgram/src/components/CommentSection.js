@@ -7,7 +7,8 @@ class CommentSection extends React.Component{
         super(props);
         this.state={
             comments: props.passedArray.comments,
-            commentInput:''
+            commentInput:'',
+            likes: props.passedArray.likes
         }
         }
         handleChange=event=>{    
@@ -29,9 +30,13 @@ class CommentSection extends React.Component{
                 commentInput: ''
             })
         }
+        addLike = (post) =>{
+                const {likes} = post;
+                this.setState({likes: likes+1})
+        }
         
         render(){
-            // console.log("ghb",this.state.commentInput)
+            //console.log(this.state.likes)
     return(
         <div className='comment-section'>
             <header className='card-header'>
@@ -40,8 +45,11 @@ class CommentSection extends React.Component{
             </header>
             
             <img src={this.props.passedArray.imageUrl} alt=''/>
-            <p className='icons'><i className="far fa-heart" ></i><i className="far fa-comment"></i></p>
-            <p className='likes'>{this.props.passedArray.likes} Likes</p>
+            <p className='icons'> 
+                <i className="far fa-heart" onClick={()=>this.addLike(this.state.likes)}></i>
+                <i className="far fa-comment"></i>
+            </p>
+            <p className='likes'>{this.state.likes} Likes</p>
 
             <Comments  array={this.state.comments}/>
 

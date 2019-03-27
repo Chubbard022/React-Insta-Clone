@@ -18,10 +18,14 @@ class App extends Component {
       stateArray: dummyData
     })
   }
+  filterPosts = post =>{
+    post.preventDefault();
+    console.log("filter!!!")
+  }
   render() {
     return (
       <div className="App">
-        <SearchBar handleInput={this.addSearch}/>
+        <SearchBar filterPosts={this.filterPosts}/>
         <PostContainer 
           searchInput={this.state.commentInput} 
           handleChange={this.handleChange}  

@@ -2,7 +2,6 @@ import React from 'react';
 
 
 const Comments = props =>{
-    console.log(props.array)
     return(
         <div className='comment-section'>
         {
