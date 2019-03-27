@@ -13,29 +13,10 @@ class App extends Component {
       searchInput: ''
     }
   }
-  handleChange=event=>{
-    console.log(event.target.value)
-
-    this.setState({
-      commentInput: event.target.value
-    })
-  }
   componentDidMount(){
     this.setState({
       stateArray: dummyData
     })
-  }
-  
-
-
-  addComment=event=>{
-    console.log('addComment is firing')
-    event.preventDefault();
-    
-
-  }
-  addLike = () =>{
-    console.log(this.state.stateArray[0].likes)
   }
   render() {
     return (
@@ -45,7 +26,7 @@ class App extends Component {
           searchInput={this.state.commentInput} 
           handleChange={this.handleChange}  
           array={this.state.stateArray} 
-          addLike={this.addLike} 
+          comments={this.state.stateArray.comments}
           addComment={this.addComment}/>
       </div>
     );
