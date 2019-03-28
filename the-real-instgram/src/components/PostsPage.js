@@ -18,14 +18,17 @@ class PostPage extends React.Component{
           stateArray: dummyData
         })
       }
-      filterPosts = post =>{
-        post.preventDefault();
-        console.log("filter!!!")
-      }
+
+      handleSearchInput=event=>{    
+       
+}
       render() {
         return (
           <div className="App">
-            <SearchBar filterPosts={this.filterPosts}/>
+            <SearchBar 
+             searchInput={this.state.searchInput}
+             handleSearchInput={this.handleSearchInput}
+             />
             <PostContainer 
               searchInput={this.state.commentInput} 
               handleChange={this.handleChange}  
