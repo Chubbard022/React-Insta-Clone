@@ -16,7 +16,8 @@ const InstaPost = styled.div`
     border: 1px solid black;
     margin: 10px;
     width: 50%;
-    padding: 5px;
+    padding: 5px
+    box-shadow: 5px 5px 5px #D2D2D2;
 `;
 
  const PostContainer = props =>{

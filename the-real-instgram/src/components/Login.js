@@ -5,12 +5,18 @@ import './PostPage.css';
 const LoginDiv = styled.div`
     background-color: #C6B7B9;
     border: 1px solid black;
-    width: 50%;
+    width: 40%;
+    box-shadow: 5px 5px 5px #D2D2D2;
+    padding: 5px;
+    margin: 0 auto;
+    border-radius: 5px;
 `;
 const LoginInput = styled.input`
     margin: 5px;
     padding: 5px;
     border: 1px solid black;
+    border-radius: 5px;
+
 `;
 class Login extends React.Component{
     constructor(){
