@@ -1,5 +1,17 @@
 import React from 'react';
+import styled, { css } from 'styled-components';
+import './PostPage.css';
 
+const LoginDiv = styled.div`
+    background-color: #C6B7B9;
+    border: 1px solid black;
+    width: 50%;
+`;
+const LoginInput = styled.input`
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+`;
 class Login extends React.Component{
     constructor(){
         super();
@@ -11,15 +23,15 @@ class Login extends React.Component{
     }
     render(){
         return(
-        <div>
+        <LoginDiv>
             <form>
-                    <input 
+                    <LoginInput 
                         type='text'
                         placeholder='add username'
                         value={this.state.username}
                         onChange={this.props.usernameLogin}
                     />
-                    <input 
+                    <LoginInput 
                         type='text'
                         placeholder='add username'
                         value={this.state.password}
@@ -27,15 +39,10 @@ class Login extends React.Component{
                     />
             </form>
             <button onClick={this.props.submitted}>Login To Instagram</button>
-        </div>
+        </LoginDiv>
             
         )
     }
   }
 
 export default Login;
-
-
-// usernameLogin={this.handleUsername} 
-// passwordLogin={this.handlePassword}
-// submitted={this/submitLogin}

@@ -1,23 +1,39 @@
 import React from 'react'
+import styled, { css } from 'styled-components';
+import './PostPage.css';
 import CommentSection from './CommentSection';
 import PropTypes from 'prop-types';
 
 
+const CardHolder = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 40px;
+`;
+
+const InstaPost = styled.div`
+    border: 1px solid black;
+    margin: 10px;
+    width: 50%;
+    padding: 5px;
+`;
+
  const PostContainer = props =>{
         return(
-        <div className='card-holder'>
+        <CardHolder>
             {
                 props.array.map((post,index)=>
-                <div className='insta-post' key={index}>
+                < InstaPost key={index}>
                             < CommentSection
                                 key={post.username} 
                                 passedArray={post} 
                                 postId={post.id}
                             />
-                </div>
+                </InstaPost>
                 )
             }
-        </div>
+        </CardHolder>
     )
   }
 
