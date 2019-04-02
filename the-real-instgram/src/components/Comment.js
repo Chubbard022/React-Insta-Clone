@@ -1,18 +1,27 @@
 import React from 'react';
+import styled, { css } from 'styled-components';
+import './PostPage.css';
 
+const CommentBox = styled.div`
+    display: flex;
+`;
+
+const Username = styled.p`
+margin-right: 5px;
+`;
 
 const Comments = props =>{
     return(
-        <div className='comment-section'>
+        <div>
         {
                 props.array.map((comment,index)=>
 
-                    <div key={index} className="comment-box">
-                        <p className='comment-username'><strong>{comment.username}</strong></p>
+                    <CommentBox>
+                        <Username><strong>{comment.username}</strong></Username>
                         <p>{comment.text}</p>
-                    </div>
+                    </CommentBox>
                 )
-            }
+        }
         </div>
     )
 }

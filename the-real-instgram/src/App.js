@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import PostPage from './components/PostsPage';
 import withAuthenticate from './Authentication/withAuthentication'
-
+import styled, { css } from 'styled-components';
+import './components/PostPage.css';
 const ComponentFromWithAuthenticate = withAuthenticate(PostPage)
 
+const DivApp = styled.div`
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+`;
 
 class App extends Component {
 state = {
@@ -20,9 +26,9 @@ toggleComponent = ()=>{
 
   render() {
     return (
-      <div className="App">
+      <DivApp>
           <ComponentFromWithAuthenticate />
-      </div>
+      </DivApp>
     );
   }
 }

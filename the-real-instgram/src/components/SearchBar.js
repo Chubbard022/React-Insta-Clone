@@ -1,21 +1,35 @@
 import React from 'react'
+import styled, { css } from 'styled-components';
+import './PostPage.css';
+
+
+const SearchBox = styled.form`
+    border-bottom: 1px solid black;
+`;
+const SearchInput = styled.input`
+    border: 1px solid black;
+    margin: 5px;
+    font-size: 20px;
+`;
 
 const SearchBar = props =>{
     return(
         <React.Fragment>
            
-            <form className='searchBox'>
+            <SearchBox onSubmit={props.filterSearch}>
             <i className="fab fa-instagram"></i>
-                <input 
-                className='searchInput'
-                type='text'
-                placeholder='search'
+                <SearchInput 
+                    
+                    placeholder='search posts....'
+                    onChange={props.handleSearchInput}
+                    name='searchInput'
+                    type='text'
+                    value={props.searchInput}
                 />
-                <button onClick={props.filterPosts}>Search</button>
                 <i className="far fa-user"></i>
                 <i className="far fa-heart"></i>
                 <i className="far fa-compass"></i>
-            </form>
+            </SearchBox>
         </React.Fragment>
     )
 }
